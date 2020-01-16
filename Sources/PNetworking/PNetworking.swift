@@ -48,7 +48,7 @@ open class PNetworking: PNetwork {
         }.resume()
     }
     private func makeUrlValid(_ url: String) -> String {
-        url.replacingOccurrences(of: "//", with: "/")
+//        url.replacingOccurrences(of: "//", with: "/")
     }
 }
 

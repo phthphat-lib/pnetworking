@@ -7,7 +7,7 @@
 
 ## PNetworking (work with API)
 ```swift
-let network = Network(baseUrl: "https://sample.com")
+let network = PNetworking(baseUrl: "https://sample.com")
 
 network.request(endPoint: SampleEndPoint.logIn(username: "abc", password: "123")) { [weak self] result in
     switch result {
@@ -67,9 +67,9 @@ class User: Codable {
 }
 
 let userData: Data
-let userParser = DataParser<User>(data: userData)
+let userParser = PParser<User>(data: userData)
 
-var user: User = userParser.toObject()!
+var user: User = PParser.toObject()!
 var userDict: [String: Any] = userParser.toDict()!
 ```
 
