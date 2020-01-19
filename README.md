@@ -3,7 +3,7 @@
 - Use `PNetworking` (based on URLSession) instead of Alamofire 
 - Use `PParser` (based on Codable) instead of ObjectMapper
 
-**Disclaimer: I use this package for my personal project. I don't recommend you use it big, massive project. But if you love, you can be a distributor :D**
+**Disclaimer: I use this package for my personal project. I don't recommend you use it in big, massive project because the package is still young. But if you love, you can be a distributor with me :D**
 
 ## PNetworking (work with API)
 ```swift
