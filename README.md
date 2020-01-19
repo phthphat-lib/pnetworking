@@ -5,6 +5,9 @@
 
 **Disclaimer: I use this package for my personal project. I don't recommend you use it in big, massive project because the package is still young. But if you love, you can be a distributor with me :D**
 
+## Install
+Use Swift Package Manager with: https://gitlab.com/phthphat-share/pnetworking.git
+
 ## PNetworking (work with API)
 ```swift
 let network = PNetworking(baseUrl: "https://sample.com")
