@@ -1,8 +1,7 @@
 //
 //  Networking.swift
-//  ComplicatedGroupChat
 //
-//  Created by Lucas Pham on 12/15/19.
+//  Created by Phat Pham on 12/15/19.
 //  Copyright © 2019 phthphat. All rights reserved.
 //
 
@@ -11,19 +10,19 @@ import Foundation
     import UIKit
 #endif
 
-public protocol PNetwork {
+public protocol PNetworking {
     func request(endPoint: EndPoint, handle: @escaping (Result<Data, Error>) -> Void )
     func requestFormData(endPoint: EndPoint, handle: @escaping (Result<Data, Error>) -> Void )
 }
 
-open class PNetworking: PNetwork {
+open class PNetwork: PNetworking {
     
     
-    var baseUrl: String
+    public var baseUrl: String
     public init(baseUrl: String){
         self.baseUrl = baseUrl
     }
-    var request: URLRequest?
+    private var request: URLRequest?
     
     private func requestData(endPoint: EndPoint, handle: @escaping (Result<Data, Error>) -> Void) {
         let session = URLSession.shared
@@ -47,13 +46,10 @@ open class PNetworking: PNetwork {
             }
         }.resume()
     }
-    private func makeUrlValid(_ url: String) -> String {
-//        url.replacingOccurrences(of: "//", with: "/")
-    }
 }
 
 //MARK: Work with normal request
-extension PNetworking {
+extension PNetwork {
     private func setUpRequest(endPoint: EndPoint){
         let fullUrl = baseUrl + endPoint.path
         var urlComp = URLComponents(url: URL(string: fullUrl)!, resolvingAgainstBaseURL: true)
@@ -83,7 +79,7 @@ extension PNetworking {
 }
 
 //MARK: Work with form data, multipart
-extension PNetworking {
+extension PNetwork {
     private func setUpFormDataRequest(endPoint: EndPoint){
         
         let fullUrl = baseUrl + endPoint.path

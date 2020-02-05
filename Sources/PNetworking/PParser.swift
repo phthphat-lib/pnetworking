@@ -1,8 +1,7 @@
 //
 //  JSONParser.swift
-//  ComplicatedGroupChat
 //
-//  Created by Lucas Pham on 12/15/19.
+//  Created by Phat Pham on 12/15/19.
 //  Copyright © 2019 phthphat. All rights reserved.
 //
 

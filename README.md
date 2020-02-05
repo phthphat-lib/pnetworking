@@ -69,7 +69,7 @@ class User: Codable {
     var username: String?
 }
 
-let userData: Data
+let userData: Data!
 let userParser = PParser<User>(data: userData)
 
 var user: User = PParser.toObject()!

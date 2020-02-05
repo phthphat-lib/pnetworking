@@ -1,8 +1,7 @@
 //
 //  EndPointType.swift
-//  BaseProject
 //
-//  Created by Lucas Pham on 12/17/19.
+//  Created by Phat Pham on 12/17/19.
 //  Copyright © 2019 phthphat. All rights reserved.
 //
 
