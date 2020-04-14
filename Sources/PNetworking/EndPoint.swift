@@ -21,3 +21,19 @@ public enum HttpMethod: String {
     case delete = "DELETE"
 }
 
+public enum NetworkError: Error {
+    case badUrl
+    case network(msg: String)
+    case custom(msg: String)
+    
+    var message: String {
+        switch self {
+        case .badUrl:
+            return "Bad or invalid url"
+        case .custom(let msg), .network(let msg):
+            return msg
+//        default:
+//            return self.localizedDescription
+        }
+    }
+}
